@@ -13,6 +13,7 @@ public class PBWT {
                 indices[i] = i;
             }
             final int currentK = k;
+            System.out.println(sequences);
             Arrays.sort(indices, (a, b) -> {
                 for (int j = currentK; j >= 0; j--) {
                     if (sequences[a][j] != sequences[b][j]) {
@@ -21,6 +22,7 @@ public class PBWT {
                 }
                 return 0;
             });
+            System.out.println(sequences);
             for (int i = 0; i < M; i++) {
                 prefixArray[k][i] = indices[i];
             }
